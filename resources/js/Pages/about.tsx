@@ -246,7 +246,6 @@ export const AboutUs = () => {
                         />
                         <textarea
                             placeholder="Your Message"
-                            rows="4"
                             className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                             style={{ marginTop: "10px" }}
                             required
