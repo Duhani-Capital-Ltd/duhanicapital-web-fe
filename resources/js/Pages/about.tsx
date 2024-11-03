@@ -195,69 +195,102 @@ export const AboutUs = () => {
             <hr id="contactUs" />
             {/* Contact Us Section */}
             <div className="max-w-screen-xl px-6 mx-auto mt-16 text-center">
-                <h2 className="text-4xl font-bold text-gray-800">Contact Us</h2>
+                <h2 className="text-4xl font-bold text-gray-800">
+                    How to Reach Us
+                </h2>
                 <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
-                    Have questions or need assistance? Our team is here to help.
-                    Reach out to us through the form below or use any of our
-                    contact options to get in touch.
+                    Our dedicated customer support team is readily available to
+                    assist you.
                 </p>
 
-                <div className="flex flex-col items-start justify-between mt-12 space-y-8 md:flex-row md:space-y-0">
-                    {/* Contact Information */}
-                    <div className="flex-grow max-w-md space-y-4 text-left bg-white rounded-2xl">
-                        <h3 className="text-2xl font-semibold text-blue-500">
-                            Our Office
-                        </h3>
-                        <p className="text-gray-700">
-                            Duhani Capital Ltd.
-                            <br />
-                            Rruga Pavaresia,  Nd:129 H.5, Ap/27, Durres Albania
-                        </p>
-                        <p className="text-gray-700">
-                            Phone: +355 524 20144
-                            <br />
-                            Email:{" "}
-                            <a
-                                href="mailto:info@duhanicapital.com"
-                                className="text-blue-500 hover:underline"
+                <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+                    {/* Live Chat */}
+                    <div className="flex flex-col items-center p-6 text-center bg-white rounded-lg shadow-md">
+                        <div className="p-4 mb-4 bg-blue-500 rounded-full">
+                            <svg
+                                className="w-8 h-8 text-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
                             >
-                                support@duhanicapital.com
-                            </a>
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M20 13V5a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h6l4 4 4-4h0a2 2 0 002-2z"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800">
+                            Live Chat
+                        </h3>
+                        <p className="mt-2 text-gray-600">
+                            Engage with our live chat representatives 24/5 for
+                            quick and efficient troubleshooting.
                         </p>
                     </div>
 
-                    {/* Contact Form */}
-                    <form className="flex-grow max-w-lg space-y-6 rounded-2xl">
-                        <h3 className="text-2xl font-semibold text-left text-gray-800">
-                            Send Us a Message
+                    {/* Email */}
+                    <div className="flex flex-col items-center p-6 text-center bg-white rounded-lg shadow-md">
+                        <div className="p-4 mb-4 bg-blue-500 rounded-full">
+                            <svg
+                                className="w-8 h-8 text-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M16 4H8a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V8a4 4 0 00-4-4zM3 8l7.39 5.26a2 2 0 002.22 0L20 8"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800">
+                            Email
                         </h3>
-                        <input
-                            type="text"
-                            placeholder="Your Name"
-                            className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                            required
-                        />
-                        <input
-                            type="email"
-                            placeholder="Your Email"
-                            className="w-full p-4 my-0 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                            style={{ marginTop: "10px" }}
-                            required
-                        />
-                        <textarea
-                            placeholder="Your Message"
-                            className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                            style={{ marginTop: "10px" }}
-                            required
-                        ></textarea>
-                        <button
-                            type="submit"
-                            className="w-full p-4 font-semibold text-white bg-blue-500 rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            style={{ marginTop: "0" }}
-                        >
-                            Send Message
-                        </button>
-                    </form>
+                        <p className="mt-2 text-gray-600">
+                            Reach out to our support team via email at{" "}
+                            <a
+                                href="mailto:support@duhanicapital.com"
+                                className="text-blue-500 hover:underline"
+                            >
+                                support@duhanicapital.com
+                            </a>{" "}
+                            and expect a prompt response.
+                        </p>
+                    </div>
+
+                    {/* Phone */}
+                    <div className="flex flex-col items-center p-6 text-center bg-white rounded-lg shadow-md">
+                        <div className="p-4 mb-4 bg-blue-500 rounded-full">
+                            <svg
+                                className="w-8 h-8 text-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M3 5h18M3 12h18m-8 7h8"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800">
+                            Phone
+                        </h3>
+                        <p className="mt-2 text-gray-600">
+                            For direct assistance, call us at +355 52 420 144.
+                            Our phone lines are accessible Monday-Friday, 9:00
+                            AM to 5:00 PM GMT.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
