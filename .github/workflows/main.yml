@@ -35,7 +35,7 @@ jobs:
           sshpass -p 'LibrA21101998' rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ emamarkets@92.205.161.185:/home/emamarkets/uat-fe-duhanicapital.ema-markets.com/
 
           # Update server
-          sshpass -p 'LibrA21101998' ssh -o StrictHostKeyChecking=no emamarkets@92.205.161.185 'cd /home/boxity/emamarkets/uat-fe-duhanicapital.ema-markets.com && php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan view:cache'
+          sshpass -p 'LibrA21101998' ssh -o StrictHostKeyChecking=no emamarkets@92.205.161.185 'cd /home/emamarkets/uat-fe-duhanicapital.ema-markets.com && php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan view:cache'
 
       - name: Set Permissions
         run: |
