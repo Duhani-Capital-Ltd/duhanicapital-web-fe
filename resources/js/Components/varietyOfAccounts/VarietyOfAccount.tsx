@@ -1,20 +1,70 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export const VarietyOfAccounts = () => {
     return (
         <>
-            <section className="bg-black text-white">
-                <div className="max-w-screen-xl mx-auto py-20">
+            <section className="text-white bg-black">
+                <div className="max-w-screen-xl px-4 py-20 mx-auto md:px-8">
                     <h2 className="text-4xl text-center mb-14">
-                        Select from a variety of account <br /> options to suit your trading needs <br />and start your journey today
+                        Select from a variety of account <br /> options to suit
+                        your trading needs <br />
+                        and start your journey today
                     </h2>
-                    <div className="grid grid-cols-5 gap-3">
-                        {Array(5).fill(0).map((_, idx) => (
-                            <div key={idx} className="bg-[#1C1C1C] rounded-md p-5">
-                                <p className="bg-blue-500 rounded-full text-white w-fit text-xs px-2 mb-3">Starters</p>
-                                <h4 className="text-2xl mb-5">Micro</h4>
+                    <div className="grid justify-center grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
+                        {[
+                            {
+                                label: "Starters",
+                                title: "Micro",
+                                bgColor: "#1C1C1C",
+                                lbColor: "#126DFF",
+                                textColor: "#fff",
+                            },
+                            {
+                                label: "Starters",
+                                title: "Standard",
+                                bgColor: "#1C1C1C",
+                                textColor: "#fff",
+                                lbColor: "#126DFF",
+                            },
+                            {
+                                label: "Advanced",
+                                title: "Professional",
+                                lbColor: "#FFF",
+                                textColor: "#1C1C1C",
+                                bgColor: "#126DFF",
+                            },
+                            {
+                                label: "In-Demand",
+                                title: "Low Spread",
+                                lbColor: "#126DFF",
+                                textColor: "#fff",
+                                bgColor: "#1C1C1C",
+                            },
+                            {
+                                label: "In-Demand",
+                                title: "Zero Spread",
+                                textColor: "#fff",
+                                lbColor: "#126DFF",
+                                bgColor: "#1C1C1C",
+                            },
+                        ].map((card, idx) => (
+                            <div
+                                key={idx}
+                                className="p-5 rounded-md"
+                                style={{ backgroundColor: card.bgColor }}
+                            >
+                                <p
+                                    className={`rounded-full text-white w-fit text-xs px-3 py-1 mb-3`}
+                                    style={{
+                                        backgroundColor: card.lbColor,
+                                        color: card.textColor,
+                                    }}
+                                >
+                                    {card.label}
+                                </p>
+                                <h4 className="mb-5 text-2xl">{card.title}</h4>
                                 <hr />
-                                <ul className="space-y-3 mt-3 text-sm font-extralight">
+                                <ul className="mt-3 space-y-3 text-sm font-extralight">
                                     {[
                                         "Spread as low as 1.2pips",
                                         "No Commission",
@@ -23,9 +73,12 @@ export const VarietyOfAccounts = () => {
                                         "Stop Out 30%",
                                         "Margin Call 100%",
                                         "FX Leverage up to 1000",
-                                        "Gold Leverage up to 500"
+                                        "Gold Leverage up to 500",
                                     ].map((feature, index) => (
-                                        <li key={index} className="flex items-center">
+                                        <li
+                                            key={index}
+                                            className="flex items-center"
+                                        >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="14"
@@ -46,11 +99,24 @@ export const VarietyOfAccounts = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="w-full flex justify-center">
-                    <Button className="rounded-full mt-10 bg-blue-600 text-white">Open an Account</Button>
+
+                    <div className="flex justify-center w-full">
+                        <Button
+                            variant="link"
+                            className="p-6 mt-10 rounded-full w-fit text-md"
+                            style={{
+                                backgroundColor: "#126DFF",
+                                color: "white",
+                                textDecoration: "none",
+                            }}
+                        >
+                            <a href="/your-target-page" className="text-white">
+                                Open an Account
+                            </a>
+                        </Button>
                     </div>
                 </div>
             </section>
         </>
-    )
-}
+    );
+};

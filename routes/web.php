@@ -19,6 +19,22 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('index');
 });
+Route::get('/account/demo', function () {
+    return Inertia::render(component: 'account-demo');
+});
+Route::get('/account/micro-standard', action: function () {
+    return Inertia::render(component: 'account-standard');
+});
+Route::get('/account/professional-low-spread', action: function () {
+    return Inertia::render(component: 'account-professional');
+});
+Route::get('/blog', action: function () {
+    return Inertia::render(component: 'blog');
+});
+Route::get(uri: '/about', action: function () {
+    return Inertia::render(component: 'about');
+});
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
