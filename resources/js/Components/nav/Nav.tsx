@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "./navigation/Navigation";
 import { DropdownCountry } from "./navigation/DropdowonCountry";
 import { Link, Head } from "@inertiajs/react";
+import { Login } from "../auth/Login";
+import Register from "../auth/Register";
+import React from "react";
 
-export const Navbar = () => {
+
+export const Navbar: React.FC = () => {
     return (
         <>
             <nav className="flex items-center justify-between max-w-screen-xl py-3 mx-auto">
@@ -31,10 +35,8 @@ export const Navbar = () => {
                         />
                     </svg>
                     <DropdownCountry />
-                    <Button className="rounded-full" variant={"outline"}>
-                        Login
-                    </Button>
-                    <Button className="rounded-full">Register</Button>
+                    <Login/>
+                    <Register/>
                 </div>
             </nav>
         </>

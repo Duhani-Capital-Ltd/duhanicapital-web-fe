@@ -9,6 +9,7 @@ import { VarietyOfAccountOption } from "@/Components/varietyOfAccountOption/Vari
 import { PaymentSystemPartners } from "@/Components/paymentSystemPartners/PaymentSystemPartners";
 import { Footer } from "@/Components/footer/Footer";
 
+
 export default function Index({
     auth,
     laravelVersion,

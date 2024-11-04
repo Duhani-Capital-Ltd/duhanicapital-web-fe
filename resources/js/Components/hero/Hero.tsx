@@ -29,7 +29,6 @@ export const Hero = () => {
                                 your trading experience to meet your financial
                                 goals.
                             </p>
-                            import Link from "next/link";
                             <Button
                                 variant="link"
                                 className="p-6 mt-10 rounded-full w-fit text-md"

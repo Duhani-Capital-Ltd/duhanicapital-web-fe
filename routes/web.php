@@ -17,7 +17,11 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('index');
+    return Inertia::render('index', [
+        'apiKey' => env('VITE_API_KEY'),
+        'baseUrl' => env('VITE_BASE_URL'),
+        'loginVersion' => env('VITE_BASE_LOGIN_VERSION')
+    ]);
 });
 Route::get('/account/demo', function () {
     return Inertia::render(component: 'account-demo');
